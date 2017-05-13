@@ -1,16 +1,19 @@
 {
-  "name": "a-frame-vr-wknd",
+  "name": "ballz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "serve": "node node_modules/live-server/live-server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ivan Macek <imacek@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "aframe": "^0.5.0",
+    "express": "^4.15.2",
     "live-server": "^1.2.0"
-  }
+  },
+  "repository": "git@github.com:epps/ballz.git"
 }
