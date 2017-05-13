@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A-Frame VR Weekend</title>
+    <title>Ballz</title>
     <script src="/node_modules/aframe/dist/aframe-master.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="app.js"></script>
 </head>
+
 <body>
     <a-scene>
         <a-assets>
@@ -19,8 +23,15 @@
 
 
         <a-entity id="goalModel" obj-model="obj: #goal-obj; mtl: #goal-mtl" scale="2 2 2" position="0 -1.3 3"></a-entity>
-
         <a-entity id="soccerBallModel" obj-model="obj: #soccer-ball-obj; mtl: #soccer-ball-mtl" scale="0.002 0.002 0.002" position="0 1 -2.5"></a-entity>
+      
+        <a-box static-body color="red" position="0 1 -5" height="2" width="2" depth="0.5"></a-box>
+        <a-sphere dynamic-body color="blue" position="0 0.1 -2" radius="0.1" throw-ball></a-sphere>
+        <a-plane static-body color="gray" rotation="-90 0 0" width="30" height="30"></a-plane>
+        <a-camera user-height="0.1">
+          <a-cursor></a-cursor>
+        </a-camera>
     </a-scene>
 </body>
+
 </html>
