@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ballz</title>
+    <script src="/node_modules/aframe/dist/aframe-master.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <a-scene physics="friction: 0.1; restitution: 0.5">
+        <a-box static-body color="red" position="0 1 -5" height="2" width="2" depth="0.5"></a-box>
+        <a-sphere dynamic-body color="blue" position="0 0.1 -2" radius="0.1" throw-ball></a-sphere>
+        <a-plane static-body color="gray" rotation="-90 0 0" width="30" height="30"></a-plane>
+        <a-camera user-height="0.1">
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>

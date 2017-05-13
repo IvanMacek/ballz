@@ -1,12 +1,10 @@
-(function(){
+const express = require('express')
+const path = require('path')
 
-    AFRAME.registerComponent('event-handler', {
-        init: function(){
-            let ball = this.el; // <a-sphere>
-            ball.addEventListener('click', function(){
-                ball.setAttribute('color', 'green');
-            });
-        } 
-    });
+const app = express()
 
-})()
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')))
+app.use('/', express.static(path.join(__dirname, 'public')))
+
+const { PORT = 3000 } = process.env
+app.listen(PORT, () => console.log(`Listening on port ${PORT}!`))
