@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A-Frame VR Weekend</title>
     <script src="node_modules/aframe/dist/aframe-master.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
     <a-scene>
         <a-box color="red" position="0 0 -5" height="2" width="2" depth="0.5"></a-box>
-        <a-sphere color="blue" position="0 1 -2.5" radius="0.1"></a-sphere>
+        <a-sphere color="blue" position="0 1 -2.5" radius="0.1" event-handler></a-sphere>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
     </a-scene>
 </body>
 </html>
