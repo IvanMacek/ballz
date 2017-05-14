@@ -12,11 +12,11 @@
 </head>
 
 <body>
-    <a-scene physics="friction: 0.1; restitution: 0.5">
+    <a-scene physics="debug:true">
         <a-box static-body color="red" position="0 1 -5" height="2" width="2" depth="0.5"></a-box>
-        <a-sphere dynamic-body color="blue" position="0 0.1 -2" radius="0.1" throw-ball></a-sphere>
-        <a-plane static-body color="gray" rotation="-90 0 0" width="30" height="30"></a-plane>
-        <a-camera user-height="0.1">
+        <a-sphere dynamic-body="sphereRadius:0.1" color="blue" position="0 0.1 -2" radius="0.1"></a-sphere>
+        <a-box static-body color="gray" rotation="-90 0 0" position="0 -0.05 0" width="30" height="30" height="0.1"></a-box>
+        <a-camera>
             <a-cursor></a-cursor>
         </a-camera>
     </a-scene>
