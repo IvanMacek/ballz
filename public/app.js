@@ -3,8 +3,8 @@
     window.onkeyup = (event) => {
         if(event.keyCode !== 32) return;
 
-        const player = document.querySelector('a-camera');
-        const ball = document.querySelector('a-sphere');
+        const player = document.getElementById('goalModel');
+        const ball = document.getElementById('soccerBallModel');
 
         let playerVector = new CANNON.Vec3().copy(player.getAttribute('position'));
         let ballVector = new CANNON.Vec3().copy(ball.getAttribute('position'));
