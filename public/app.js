@@ -11,7 +11,7 @@
         let newBallVector = ballVector.vsub(playerVector);
         newBallVector.y = 0;
         newBallVector.normalize();
-        newBallVector.y = 0.66;
+        newBallVector.y = 0.7;
 
         ball.body.applyImpulse(
             newBallVector.scale(40),
