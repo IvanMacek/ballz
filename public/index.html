@@ -20,6 +20,7 @@
             <a-asset-item id="goal-dae" src="/models/goal/model.dae"></a-asset-item>
 
             <a-asset-item id="grass-texture" src="/textures/grass.png"></a-asset-item>
+            <a-asset-item id="sky-texture" src="/textures/sky.jpg"></a-asset-item>
         </a-assets>
 
         <a-camera user-height="1.6">
@@ -32,7 +33,7 @@
 
         <a-collada-model static-body id="goalModel" src="#goal-dae" position="-3.8 0 -10" rotation="0 -90 0"></a-collada-model>
         <a-entity id="soccerBallModel" throw-ball dynamic-body="shape: sphere; sphereRadius: 0.13" id="soccerBallModel" obj-model="obj: #soccer-ball-obj; mtl: #soccer-ball-mtl" scale="0.002 0.002 0.002" position="0 2 -2.5"></a-entity>
-
+        <a-sky src="#sky-texture"></a-sky>
     </a-scene>
 </body>
 
