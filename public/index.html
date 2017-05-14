@@ -12,25 +12,28 @@
 </head>
 
 <body>
-    <a-scene>
+    <a-scene physics="debug: true">
         <a-assets>
             <a-asset-item id="soccer-ball-obj" src="/models/soccer-ball/football-soccer-ball.obj"></a-asset-item>
             <a-asset-item id="soccer-ball-mtl" src="/models/soccer-ball/football-soccer-ball.mtl"></a-asset-item>
 
             <a-asset-item id="goal-obj" src="/models/goal/goal.obj"></a-asset-item>
             <a-asset-item id="goal-mtl" src="/models/goal/goal.mtl"></a-asset-item>
+
+            <a-asset-item id="grass-texture" src="/textures/grass.png"></a-asset-item>
         </a-assets>
 
-
-        <a-entity id="goalModel" obj-model="obj: #goal-obj; mtl: #goal-mtl" scale="2 2 2" position="0 -1.3 3"></a-entity>
-        <a-entity id="soccerBallModel" obj-model="obj: #soccer-ball-obj; mtl: #soccer-ball-mtl" scale="0.002 0.002 0.002" position="0 1 -2.5"></a-entity>
-      
-        <a-box static-body color="red" position="0 1 -5" height="2" width="2" depth="0.5"></a-box>
-        <a-sphere dynamic-body color="blue" position="0 0.1 -2" radius="0.1" throw-ball></a-sphere>
-        <a-plane static-body color="gray" rotation="-90 0 0" width="30" height="30"></a-plane>
-        <a-camera user-height="0.1">
-          <a-cursor></a-cursor>
+        <a-camera user-height="1.6">
+            <a-cursor></a-cursor>
         </a-camera>
+
+        <a-box static-body position="0 -0.5 0" width="30" height="1" depth="30"
+               material="src:#grass-texture; repeat: 10 10">
+        </a-box>
+
+        <a-entity static-body id="goalModel" obj-model="obj: #goal-obj; mtl: #goal-mtl" scale="5 4 1.5" position="0 -2.650 0"></a-entity>
+        <a-entity throw-ball dynamic-body="shape: sphere; sphereRadius: 0.13" id="soccerBallModel" obj-model="obj: #soccer-ball-obj; mtl: #soccer-ball-mtl" scale="0.002 0.002 0.002" position="0 2 -2.5"></a-entity>
+
     </a-scene>
 </body>
 
