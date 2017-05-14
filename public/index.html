@@ -17,8 +17,7 @@
             <a-asset-item id="soccer-ball-obj" src="/models/soccer-ball/football-soccer-ball.obj"></a-asset-item>
             <a-asset-item id="soccer-ball-mtl" src="/models/soccer-ball/football-soccer-ball.mtl"></a-asset-item>
 
-            <a-asset-item id="goal-obj" src="/models/goal/goal.obj"></a-asset-item>
-            <a-asset-item id="goal-mtl" src="/models/goal/goal.mtl"></a-asset-item>
+            <a-asset-item id="goal-dae" src="/models/goal/model.dae"></a-asset-item>
 
             <a-asset-item id="grass-texture" src="/textures/grass.png"></a-asset-item>
         </a-assets>
@@ -31,7 +30,8 @@
                material="src:#grass-texture; repeat: 10 10">
         </a-box>
 
-        <a-entity static-body id="goalModel" obj-model="obj: #goal-obj; mtl: #goal-mtl" scale="5 4 1.5" position="0 -2.650 0"></a-entity>
+
+        <a-collada-model src="#goal-dae" position="-3.8 0 -10" rotation="0 -90 0"></a-collada-model>
         <a-entity throw-ball dynamic-body="shape: sphere; sphereRadius: 0.13" id="soccerBallModel" obj-model="obj: #soccer-ball-obj; mtl: #soccer-ball-mtl" scale="0.002 0.002 0.002" position="0 2 -2.5"></a-entity>
 
     </a-scene>
