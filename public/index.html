@@ -21,6 +21,7 @@
             <a-asset-item id="goal-mtl" src="/models/goal/goal.mtl"></a-asset-item>
 
             <a-asset-item id="grass-texture" src="/textures/grass.png"></a-asset-item>
+            <a-asset-item id="sky-texture" src="/textures/sky.jpg"></a-asset-item>
         </a-assets>
 
         <a-camera user-height="1.6">
@@ -33,7 +34,7 @@
 
         <a-entity static-body id="goalModel" obj-model="obj: #goal-obj; mtl: #goal-mtl" scale="5 4 1.5" position="0 -2.650 0"></a-entity>
         <a-entity id="soccerBallModel" throw-ball dynamic-body="shape: sphere; sphereRadius: 0.13" id="soccerBallModel" obj-model="obj: #soccer-ball-obj; mtl: #soccer-ball-mtl" scale="0.002 0.002 0.002" position="0 2 -2.5"></a-entity>
-
+        <a-sky src="#sky-texture"></a-sky>
     </a-scene>
 </body>
 
